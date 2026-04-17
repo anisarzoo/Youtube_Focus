@@ -44,10 +44,21 @@ html.yt-focus-hide-ads ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
 html.yt-focus-hide-ads ytd-rich-item-renderer:has(#ad-badge),
 html.yt-focus-hide-ads ytd-video-renderer:has(.badge-style-type-ad),
 html.yt-focus-hide-ads ytd-promoted-video-renderer,
-html.yt-focus-hide-ads ytd-rich-item-renderer:has(.badge-style-type-ad) {
+html.yt-focus-hide-ads ytd-rich-item-renderer:has(.badge-style-type-ad),
+/* Modern Sponsored homepage ads */
+html.yt-focus-hide-ads ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
+html.yt-focus-hide-ads ytd-rich-item-renderer:has(span.ytd-badge-supported-renderer:not([hidden])),
+html.yt-focus-hide-ads ytd-rich-item-renderer:has(a[href^="https://www.googleadservices.com/"]),
+html.yt-focus-hide-ads ytd-rich-item-renderer:has(path[d="M17 14h-2v2h2v-2zm-4 0h-2v2h2v-2zm-4 0H7v2h2v-2zm8-4h-2v2h2v-2zm-4 0h-2v2h2v-2zm-4 0H7v2h2v-2z"]),
+/* Anti-Adblock & Premium Overlays */
+html.yt-focus-hide-ads tp-yt-iron-overlay-backdrop,
+html.yt-focus-hide-ads ytd-enforcement-message-view-model,
+html.yt-focus-hide-ads ytd-popup-container:has(ytd-enforcement-message-view-model),
+html.yt-focus-hide-ads tp-yt-paper-dialog:has(yt-formatted-string:contains("Ad blockers")),
+html.yt-focus-hide-ads #premium-upsell-promo,
+html.yt-focus-hide-ads ytd-mealbar-promo-renderer {
     display: none !important;
 }
-
 /* Description Hiding */
 html.yt-focus-hide-description #description,
 html.yt-focus-hide-description #description-inner,
